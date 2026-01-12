@@ -1,4 +1,5 @@
 import TravelCard from "./TravelCard";
+import './TravelList.css';
 
 function TravelList({ travels, onEdit, onDelete }) {
     if (travels.length === 0) {
