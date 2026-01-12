@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import './App.css';
 import Header from './components/Header';
 import TravelList from './components/TravelList';
+import TravelForm from './components/TravelForm';
 
 
 function App() {
@@ -59,7 +60,14 @@ function App() {
       <Header
         totalTrips={travels.length}
         totalCountries={totalCountries} />
-        
+
+      <TravelForm
+        onAdd={handleAdd}
+        editingTravel={editingTravel}
+        onUpdate={handleUpdate}
+        onCancelEdit={handleCancelEdit}
+      />
+
       <TravelList
         travels={travels}
         onEdit={handleEdit}
