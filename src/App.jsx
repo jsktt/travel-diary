@@ -6,7 +6,6 @@ import TravelForm from './components/TravelForm';
 
 
 function App() {
-
   const [travels, setTravels] = useState(() => {
     const saved = localStorage.getItem(`travels`);
     if (saved) {
