@@ -14,14 +14,14 @@ function TravelList({ travels, onEdit, onDelete }) {
 
     return (
         <div className="travel-list">
-            {travels.map((travel) => {
+            {travels.map((travel) => (
                 <TravelCard
                     key={travel.id}
                     travel={travel}
                     onEdit={onEdit}
                     onDelete={onDelete}
                 />
-            })}
+            ))}
         </div>
     );
 }
