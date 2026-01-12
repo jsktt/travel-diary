@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import './App.css';
 import Header from './components/Header';
+import TravelList from './components/TravelList';
 
 
 function App() {
@@ -58,6 +59,14 @@ function App() {
       <Header
         totalTrips={travels.length}
         totalCountries={totalCountries} />
+        
+      <TravelList
+        travels={travels}
+        onEdit={handleEdit}
+        onDelete={handleDelete}
+      />
+
+
     </div>
   );
 }
